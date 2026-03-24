@@ -1,0 +1,10 @@
+[package]
+name = "ams-core"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+description = "AMS meter decoding and shared logic (no embedded deps)"
+
+[lib]
+name = "ams_core"
+path = "src/lib.rs"

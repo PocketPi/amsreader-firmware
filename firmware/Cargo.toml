@@ -1,0 +1,16 @@
+# Host unit tests (CRC, parsers): `cargo test -p ams-core --lib` from this directory.
+# ESP32 firmware (Xtensa): `cd esp32 && cargo build --release` (needs espup toolchain, ldproxy, python3-venv).
+[workspace]
+resolver = "2"
+members = ["ams-core", "esp32"]
+
+[workspace.package]
+edition = "2021"
+rust-version = "1.82"
+
+[profile.release]
+opt-level = "s"
+
+[profile.dev]
+debug = true
+opt-level = "z"
