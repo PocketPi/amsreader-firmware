@@ -13,6 +13,7 @@ harness = false
 [dependencies]
 ams-core = { path = "../ams-core" }
 log = "0.4"
+esp-idf-hal = "0.46.2"
 esp-idf-svc = { version = "0.52.1", features = [
     "critical-section",
     "embassy-time-driver",

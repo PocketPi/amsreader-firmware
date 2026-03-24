@@ -31,6 +31,7 @@ dependencies = [
  "ams-core",
  "embassy-time",
  "embuild",
+ "esp-idf-hal",
  "esp-idf-svc",
  "log",
 ]
