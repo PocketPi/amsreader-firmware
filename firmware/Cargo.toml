@@ -1,0 +1,17 @@
+# Host unit tests (CRC, HAN unwrap): `cargo test -p ams-core --lib` from this directory.
+# ESP32 firmware (Xtensa): `cd esp32 && cargo build --release` (needs espup toolchain, ldproxy, python3-venv).
+# HAN UART defaults: UART1 RX=GPIO16 TX=GPIO17, 2400 8E1 (see `esp32/src/main.rs`).
+[workspace]
+resolver = "2"
+members = ["ams-core", "esp32"]
+
+[workspace.package]
+edition = "2021"
+rust-version = "1.82"
+
+[profile.release]
+opt-level = "s"
+
+[profile.dev]
+debug = true
+opt-level = "z"
